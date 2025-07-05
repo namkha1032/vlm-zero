@@ -1,0 +1,19 @@
+- architecture
+- training
+
+
+- different types of model (pre-train, fine tuned)
+- 
+
+redundant information
+
+
+Todo
+- xem lai torch.flatten vs GlobalAverage
+- xem lai size cua position encoding
+- check xem layer_norm1 voi layer_norm2 co dung chung duoc ko
+- kiem tra lai xem nen dung residual truoc hay sau layernorm
+- xem xem thay functional.gelu = nn.gelu duoc ko
+- xem xem dung nn.Sequential trong MLP nhu transformer-zero duoc ko
+- check xem dung nn.dropout trong SiglipAttention thi load duoc param cua paligemma ko
+- thay nn.ModuleList bang nn.Sequential trong SiglipEncoder
