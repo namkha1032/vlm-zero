@@ -17,3 +17,6 @@ Todo
 - xem xem dung nn.Sequential trong MLP nhu transformer-zero duoc ko
 - check xem dung nn.dropout trong SiglipAttention thi load duoc param cua paligemma ko
 - thay nn.ModuleList bang nn.Sequential trong SiglipEncoder
+- xem lai cai normalizer = torch.tensor(self.config.hidden_size**0.5, dtype=hidden_states.dtype)
+- xem lai vi sao lai + voi output (nhu residual connection?) output = output * (1.0 + self.weight.float())
+- xem xem trao doi vi tri qlen va self.num_heads ma ko can buoc transpose duoc ko query_states = query_states.view(batch_size, q_len, self.num_heads, self.head_dim).transpose(1,2) # [batch_size, num_heads, q_len, head_dim]
