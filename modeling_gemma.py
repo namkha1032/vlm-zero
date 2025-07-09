@@ -101,6 +101,7 @@ class PaliGemmaConfig():
         self.text_config = GemmaConfig(**text_config, pad_token_id=pad_token_id)
         self.vocab_size = self.text_config.vocab_size
         self.text_config.num_image_tokens = (self.vision_config.image_size // self.vision_config.patch_size)**2
+        self.vision_config.projection_dim = projection_dim
         pass
 
 class GemmaRMSNorm(nn.Module):
@@ -207,7 +208,7 @@ class GemmaAttention(nn.Module):
         self.head_dim = config.head_dim
         self.num_key_value_heads = config.num_key_value_heads
         self.num_key_value_groups = self.num_heads // self.num_key_value_heads
-        self.max_position_embedings = config.max_position_embeddings
+        self.max_position_embeddings = config.max_position_embeddings
         self.rope_theta = config.rope_theta
         self.is_causal = True
         
